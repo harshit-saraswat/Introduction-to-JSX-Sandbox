@@ -1,27 +1,15 @@
 import React from "react";
 import ReactDom from "react-dom";
 import contacts from "./contacts";
-
-function Card(props) {
-  return (
-    <div>
-      <div className="card">
-        <div className="top">
-          <h2 className="name">{props.name}</h2>
-          <img className="circle-img" src={props.img} alt="contact-image" />
-        </div>
-        <div className="bottom">
-          <p className="info">{props.phone}</p>
-          <p className="info">{props.email}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
+import Avatar from "./comps/Avatar";
+import Card from "./comps/Card";
 
 ReactDom.render(
   <div>
     <h1 className="heading">My Contacts</h1>
+
+    <Avatar img="https://dslv9ilpbe7p1.cloudfront.net/kPtHR9HxLCkBR5SiZuTtbA_store_banner_image.jpeg" />
+
     <Card
       name="John Doe"
       phone="+91 9876543210"
